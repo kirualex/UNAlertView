@@ -58,14 +58,12 @@ final public class UNAlertView: UIView {
         
         self.frame            = UIScreen.mainScreen().bounds
         self.backgroundColor  = UIColor(white: 0, alpha: 0.2)
-        containerView.layer.cornerRadius = cornerRadius
         containerView.layer.masksToBounds      = true
         
         shadowView.layer.shadowColor   = UIColor.blackColor().CGColor
         shadowView.layer.shadowOffset  = CGSizeZero
         shadowView.layer.shadowOpacity = kShadowOpacity
-        shadowView.layer.shadowRadius  = cornerRadius
-        
+
     }
     
     // Add a button with a title and an action
@@ -99,6 +97,8 @@ final public class UNAlertView: UIView {
     public func show() {
         
         // Draw all the subviews
+        shadowView.layer.shadowRadius  = cornerRadius
+        containerView.layer.cornerRadius = cornerRadius
         
         // Remove all the subviews
         for subview in self.subviews {
