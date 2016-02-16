@@ -11,7 +11,6 @@ import UIKit
 private let kContainerWidth: CGFloat = 300.0
 private let kButtonHeight: CGFloat   = 50.0
 private let kUNAlertViewTag          = 1928
-private let kCornerRadius: CGFloat   = 6.0
 private let kShadowOpacity: Float    = 0.15
 
 internal enum UNButtonAlignment {
@@ -26,6 +25,9 @@ final public class UNAlertView: UIView {
     private var containerView     = UIView()
     private var shadowView        = UIView()
     private var buttons           = [UNAlertButton]()
+    
+    // Corner Radius
+    var cornerRadius: CFGloat = 6.0
     
     // Message alignment
     var messageAlignment      = NSTextAlignment.Center
@@ -56,19 +58,19 @@ final public class UNAlertView: UIView {
         
         self.frame            = UIScreen.mainScreen().bounds
         self.backgroundColor  = UIColor(white: 0, alpha: 0.2)
-        containerView.layer.cornerRadius = kCornerRadius
+        containerView.layer.cornerRadius = cornerRadius
         containerView.layer.masksToBounds      = true
         
         shadowView.layer.shadowColor   = UIColor.blackColor().CGColor
         shadowView.layer.shadowOffset  = CGSizeZero
         shadowView.layer.shadowOpacity = kShadowOpacity
-        shadowView.layer.shadowRadius  = kCornerRadius
+        shadowView.layer.shadowRadius  = cornerRadius
         
     }
     
     // Add a button with a title and an action
     public func addButton(title:String, action:()->Void) {
-        
+
         let btn    = UNAlertButton(title: title)
         btn.action = action
         btn.addTarget(self, action:Selector("buttonTapped:"), forControlEvents:.TouchUpInside)
