@@ -27,7 +27,7 @@ final public class UNAlertView: UIView {
     private var buttons           = [UNAlertButton]()
     
     // Corner Radius
-    var cornerRadius: CFGloat = 6.0
+    var cornerRadius: CGFloat = 6.0
     
     // Message alignment
     var messageAlignment      = NSTextAlignment.Center
