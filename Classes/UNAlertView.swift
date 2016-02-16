@@ -13,7 +13,7 @@ private let kButtonHeight: CGFloat   = 50.0
 private let kUNAlertViewTag          = 1928
 private let kShadowOpacity: Float    = 0.15
 
-internal enum UNButtonAlignment {
+public enum UNButtonAlignment {
     case Horizontal
     case Vertical
 }
@@ -27,17 +27,17 @@ final public class UNAlertView: UIView {
     private var buttons           = [UNAlertButton]()
     
     // Corner Radius
-    var cornerRadius: CGFloat = 6.0
+    public var cornerRadius: CGFloat = 6.0
     
     // Message alignment
-    var messageAlignment      = NSTextAlignment.Center
+    public var messageAlignment      = NSTextAlignment.Center
     
     // Button alignment
-    var buttonAlignment       = UNButtonAlignment.Horizontal
+    public var buttonAlignment       = UNButtonAlignment.Horizontal
     
     // Fonts
-    var titleFont: UIFont?
-    var messageFont: UIFont?
+    public var titleFont: UIFont?
+    public var messageFont: UIFont?
 
     required public init?(coder aDecoder: NSCoder) {
         
@@ -135,11 +135,11 @@ final public class UNAlertView: UIView {
         
         // Message
         messageLabel.numberOfLines = 0
+        messageLabel.font = (messageFont != nil) ? messageFont : UIFont.systemFontOfSize(16)
         let messageSize    = messageLabel.sizeThatFits(CGSize(width: kContainerWidth-44, height: 9999))
         messageLabel.frame = CGRect(x: 22, y: currentContentHeight + 10, width: kContainerWidth-44, height: messageSize.height)
         currentContentHeight = getBottomPos(messageLabel)
         messageLabel.textAlignment = messageAlignment
-        messageLabel.font = (messageFont != nil) ? messageFont : UIFont.systemFontOfSize(16)
         containerView.addSubview(messageLabel)
         
         
