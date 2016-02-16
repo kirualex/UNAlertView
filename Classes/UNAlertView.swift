@@ -18,7 +18,7 @@ public enum UNButtonAlignment {
     case Vertical
 }
 
-final public class UNAlertView: UIView {
+public class UNAlertView: UIView {
     
     private var titleLabel        = UILabel()
     private var messageLabel      = UILabel()
