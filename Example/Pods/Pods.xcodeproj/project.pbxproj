@@ -18,6 +18,9 @@
 		B1460D781E9F6076841DBB8884BD1A61 /* Pods-UNAlertView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3022393C3C99FAC25E7656B41C26735B /* Pods-UNAlertView_Tests-dummy.m */; };
 		B29A8D1559EB82F6DA9AC81658821E9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6043DD8B849E3D92F5B451815A5ECF /* Foundation.framework */; };
 		F84A045D1FD2B75CC5E0FFD9B17CBE4B /* Pods-UNAlertView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CA8A0A9D6D367E6F7694D008DD566718 /* Pods-UNAlertView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA5800521DA5293200124300 /* UNAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5800511DA5293200124300 /* UNAlertView.swift */; };
+		FA5800531DA5293200124300 /* UNAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5800511DA5293200124300 /* UNAlertView.swift */; };
+		FA5800541DA5293200124300 /* UNAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5800511DA5293200124300 /* UNAlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,7 @@
 		F225A47C986C66799C06B51A267F29DE /* Pods-UNAlertView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UNAlertView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F7307335491E5633F39CA138B6E4243A /* Pods-UNAlertView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UNAlertView_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		F7F41DF513467E3E567E4F5DB25F2984 /* Pods-UNAlertView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UNAlertView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		FA5800511DA5293200124300 /* UNAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UNAlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,7 @@
 		765EF77F44E4DE86FA8C848E27230241 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FA5800511DA5293200124300 /* UNAlertView.swift */,
 				B6CCA93016C8206FC1EB14A0ED8D874C /* ReplaceMe.swift */,
 			);
 			path = Classes;
@@ -358,6 +363,20 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					488964B0835F43E495C079819EC3FDC5 = {
+						LastSwiftMigration = 0810;
+					};
+					C31DD3B86C0A28A3D9B97EFF5918B959 = {
+						LastSwiftMigration = 0810;
+					};
+					D35A61AC44ACA1BF4E2DBBE5EF72CAED = {
+						LastSwiftMigration = 0810;
+					};
+					DC19C0855CD1B83644590C71002EE6A8 = {
+						LastSwiftMigration = 0810;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -402,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5800541DA5293200124300 /* UNAlertView.swift in Sources */,
 				260713F94373CE83B7B36A7DCF6C54BA /* ReplaceMe.swift in Sources */,
 				3010DDAA0852B2273CEC364558A256CD /* UNAlertView-dummy.m in Sources */,
 			);
@@ -411,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5800531DA5293200124300 /* UNAlertView.swift in Sources */,
 				B1460D781E9F6076841DBB8884BD1A61 /* Pods-UNAlertView_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5800521DA5293200124300 /* UNAlertView.swift in Sources */,
 				A8B0E4E1A355314A787AF2F4EAA013C0 /* Pods-UNAlertView_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +532,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -520,6 +543,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F225A47C986C66799C06B51A267F29DE /* Pods-UNAlertView_Tests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -539,6 +563,7 @@
 				PRODUCT_NAME = Pods_UNAlertView_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -553,6 +578,7 @@
 				PRODUCT_NAME = UNAlertView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
@@ -617,6 +643,7 @@
 				PRODUCT_NAME = UNAlertView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -631,6 +658,7 @@
 				PRODUCT_NAME = UNAlertView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
@@ -639,6 +667,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E04B13BE59AC085795092A038E51A389 /* Pods-UNAlertView_Example.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -659,6 +688,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -669,6 +699,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 792C9DB96E2FE1F0E27034DDEA279EEB /* Pods-UNAlertView_Tests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -689,6 +720,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -699,6 +731,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CF93909F1449CE30D7047C69EF1FA532 /* Pods-UNAlertView_Example.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -718,6 +751,7 @@
 				PRODUCT_NAME = Pods_UNAlertView_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
